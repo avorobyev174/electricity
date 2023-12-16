@@ -209,10 +209,6 @@
             visibility: visible;
         }
     </style>
-    <link rel="stylesheet" id="et-divi-open-sans-css" href="./home/css"
-          type="text/css" media="all">
-    <link rel="stylesheet" id="et-builder-googlefonts-cached-css"
-          href="./home/css(1)" type="text/css" media="all">
     <link rel="stylesheet" id="divi-style-css" href="./home/style-static.min.css"
           type="text/css" media="all">
     <script type="text/javascript" src="./home/jquery.min.js"
@@ -221,8 +217,6 @@
             id="jquery-migrate-js"></script>
     <script type="text/javascript" src="./home/jquery.blockUI.min.js"
             id="jquery-blockui-js" defer="defer" data-wp-strategy="defer"></script>
-    <script type="text/javascript" src="./home/add-to-cart.min.js"
-            id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript" src="./home/js.cookie.min.js" id="js-cookie-js"
             defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript" src="./home/woocommerce.min.js"
@@ -367,11 +361,11 @@
                 <nav id="top-menu-nav">
                     <ul id="top-menu" class="nav">
                         <li id="menu-item-214839"
-                            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-214838 current_page_item menu-item-214839">
-                             <a href="home.html">Главная</a>
+                            class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item menu-item-214839 current_page_item"><a
+                                href="home.html">Главная</a>
                         </li>
-                        <li id="menu-item-214843"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214843"><a
+                        <li id="menu-item-214849"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214849"><a
                                 href="services.html">Услуги</a>
                         </li>
                         <li id="menu-item-214845"
@@ -383,9 +377,20 @@
                                 href="contact.html">Контакты</a>
                         </li>
                         <li id="menu-item-214853"
-                            class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-214853">
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214853">
                             <a href="portfolio.html"
-                               aria-current="page">Портфолио</a></li>
+                               aria-current="page">Портфолио</a>
+                        </li>
+                        <li id="menu-item-214843"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214843">
+                            <a href="service.html"
+                               aria-current="page">Сервис</a>
+                        </li>
+                        <li id="menu-item-214851"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214851">
+                            <a href="project.html"
+                               aria-current="page">Проекты</a>
+                        </li>
                     </ul>
                 </nav>
                 <div id="et_mobile_nav_menu">
@@ -396,8 +401,8 @@
                         </span>
                         <ul id="mobile_menu" class="et_mobile_menu animate__animated">
                             <li id="menu-item-214839"
-                                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-214839 current_page_item menu-item-214839 et_first_mobile_item">
-                                <a href="home.html">Главная</a>
+                                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item menu-item-214839 current_page_item"><a
+                                    href="home.html">Главная</a>
                             </li>
                             <li id="menu-item-214849"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214849"><a
@@ -414,7 +419,18 @@
                             <li id="menu-item-214853"
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214853">
                                 <a href="portfolio.html"
-                                   aria-current="page">Портфолио</a></li>
+                                   aria-current="page">Портфолио</a>
+                            </li>
+                            <li id="menu-item-214843"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214843">
+                                <a href="service.html"
+                                   aria-current="page">Сервис</a>
+                            </li>
+                            <li id="menu-item-214851"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-214851">
+                                <a href="project.html"
+                                   aria-current="page">Проекты</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -940,20 +956,22 @@
 	var et_pb_box_shadow_elements=[];
 	/* ]]> */
 </script>
+<script type="text/javascript" src="./home/scripts.min.js"
+        id="divi-custom-script-js"></script>
+<script type="text/javascript" src="./home/common.js"
+        id="et-core-common-js"></script>
 <script>
 	const [ mobileButton ] = document.getElementsByClassName('mobile_menu_bar mobile_menu_bar_toggle');
 	const [ mobileNav ] = document.getElementsByClassName('mobile_nav');
 	const mobileMenu = document.getElementById('mobile_menu');
 	mobileButton.addEventListener('click', () => {
 		if (mobileNav.classList.contains('closed')) {
-            console.log('open')
             mobileMenu.classList.add('animate__fadeIn')
             mobileMenu.classList.remove('animate__fadeOut')
 			mobileNav.classList.remove('closed')
 			mobileNav.classList.add('opened')
 			mobileMenu.style.display = 'block'
 		} else {
-            console.log('close')
             mobileMenu.classList.remove('animate__fadeIn')
             mobileMenu.classList.add('animate__fadeOut')
 			mobileNav.classList.remove('opened')

@@ -1,5 +1,4 @@
 
-
 a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, u, ul, var {
     margin: 0;
     padding: 0;
@@ -2579,7 +2578,7 @@ body.admin-bar.et_fixed_nav.et_secondary_nav_enabled #main-header {
     }
 
     .et_header_style_left #et-top-navigation, .et_header_style_left .et-fixed-header #et-top-navigation {
-        padding-top: 16px;
+        padding-top: 24px;
         display: block
     }
 
@@ -7863,7 +7862,6 @@ body.safari .section_has_divider, body.uiwebview .section_has_divider {
         width: 100%
     }
 }
-
 @font-face {
     font-family: FontAwesome;
     font-style: normal;
